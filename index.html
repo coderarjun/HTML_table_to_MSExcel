@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="table2excel.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="export">Download File</button> <br><br>
+
+    <table border="1" id="table">
+        <tr>
+            <th>S.N</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Phone</th>
+            <th>Website</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Arjun</td>
+            <td>Birtamode</td>
+            <td>9816924232</td>
+            <td>coderarjun.com</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Ramesh</td>
+            <td>Birtamode</td>
+            <td>9816924232</td>
+            <td>coderarjun.com</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Gopal</td>
+            <td>Birtamode</td>
+            <td>9816924232</td>
+            <td>coderarjun.com</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Asmita</td>
+            <td>Birtamode</td>
+            <td>9816924232</td>
+            <td>coderarjun.com</td>
+        </tr>
+
+    </table>
+</body>
+<script>
+    var table2excel = new Table2Excel();
+    document.getElementById('export').addEventListener('click', function () {
+        table2excel.export(document.querySelectorAll('table'));
+    });
+</script>
+
+</html>
